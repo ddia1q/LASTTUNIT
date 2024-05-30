@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario </title>
+    <link rel="stylesheet" href="./style/style.CSS">
+</head>
+<body>
+    <video autoplay loop muted id="VideoFondo">
+        <source src="svt.mp4" type="video/mp4"/>
+    </video>
+    <h1 style="color: white;"> BIENVENIDO A DISNEY WORLD:)</h1>
+    <div class="formulario">
+        <!--Referencia a la pagina que nos dara acceso o error al ingresas los datos del usuario-->
+    <form method="post" action="login.php" >
+        <!--Primer campo a llenar, este debe estar en la bd-->
+        <label for="usuario">Usuario </label><br />
+        <input type="text" id="usuario"  name="usuario" required /><br />
+
+        <!--segundo campo a llenar, este debe estar en la bd-->
+        <label for="contraseña">Contraseña </label><br />
+        <input type="password" id="password" name="password" required /><br />
+
+        <input type="submit" value="ingresar"/>
+        <!--Referenciamos nuestra pagina php de registro, la cual permitira al usuario darse de alta en 
+        la base de datos-->
+
+        <button type="button" id="Mcontraseña">Mostrar Contraseña</button><br /> <br />
+        <!-- Botón para mostrar u ocultar la contraseña -->
+
+        <button type ="button" onclick="location.href='view/v_register.php'">
+            Registrar
+        </button>
+        <!--Referenciamos nuestra pagina php de seleccion, la cual mostrara todos los usuarios registrados 
+        en la base de datos-->
+        <button type ="button" onclick="location.href='view/select.php'">
+            Mostrar
+        </button>
+        
+        <!--<script src="SCRIPT/formValidation.js"></script>-->
+    <!-- Enlaza el archivo JavaScript para la validación del formulario -->
+    <script src="SCRIPT/Mcontraseña.JS"></script>
+
+    </form>
+</div>
+</body>
+</html>
